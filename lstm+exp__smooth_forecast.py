@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the data from CSV file
-data = pd.read_csv("/content/drive/MyDrive/data_modified (1).csv")
-data1= pd.read_csv("/content/drive/MyDrive/data1.csv")
+data = pd.read_csv("/content/drive/MyDrive/data_modified.csv")
+data1= pd.read_csv("/content/drive/MyDrive/data01.csv")
 
 from google.colab import drive
 drive.mount('/content/drive')
@@ -51,7 +51,7 @@ import matplotlib.pyplot as plt
 # Assume you have a DataFrame 'data' with a column named 'Quantity' (or any other relevant column)
 
 # Apply exponential smoothing
-alpha = 0.5 # Smoothing parameter (adjust as needed)
+alpha = 0.2 # Smoothing parameter (adjust as needed)
 data['Smoothed_Quantity'] = data['Quantity'].ewm(alpha=alpha, adjust=False).mean()
 
 # Plotting the results
